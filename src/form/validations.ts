@@ -16,6 +16,8 @@ export const mainFormValuesSchema = yup.object({
       name: yup.string().required(),
       email: yup
         .string()
+        // TODO: Better validation messages.
+        .required()
         .email()
         // TODO: Debounce using Lodash or something. Returns a promise though, careful.
         // I've used blur validations in `useForm` for better UX and to reduce the API spam.
